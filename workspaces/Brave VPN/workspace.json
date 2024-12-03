@@ -1,0 +1,32 @@
+{
+    "description": "The Brave browser is a fast, private and secure web browser with VPN support",
+    "docker_registry": "https://index.docker.io/v1/",
+    "image_src": "brave.png",
+    "name": "brlathanjr/kasm-brave-vpn:1.16.1",
+    "run_config": {
+      "hostname": "kasm"
+    },
+    "exec_config": {
+      "go": {
+        "cmd": "bash -c '/dockerstartup/custom_startup.sh --go --url \"$KASM_URL\"'"
+      },
+      "assign": {
+        "cmd": "bash -c '/dockerstartup/custom_startup.sh --assign --url \"$KASM_URL\"'"
+      }
+    },
+    "categories": [
+      "Browser"
+    ],
+    "friendly_name": "Brave VPN",
+    "architecture": [
+      "amd64",
+      "arm64"
+    ],
+    "compatibility": [
+      "1.13.x",
+      "1.14.x",
+      "1.15.x",
+      "1.16.x"
+    ],
+    "uncompressed_size_mb": 2170
+  }
