@@ -6,9 +6,15 @@
     "run_config": {
       "hostname": "kasm",
       "dns": [
-        "8.8.8.8",
-        "8.8.4.4"
+        "208.67.222.222",
+        "208.67.220.220"
       ],
+      "devices": [
+        "dev/net/tun",
+        "/dev/net/tun"
+      ],
+      "user": "root",
+      "privileged": true,
       "sysctls": {
         "net.ipv4.conf.all.src_valid_mark": 1
       },
@@ -26,7 +32,7 @@
         "cmd": "bash -c '/dockerstartup/custom_startup.sh --assign --url \"$KASM_URL\"'"
       },
        "first_launch":{
-          "cmd":"bash -c '/usr/bin/desktop_ready && xfce4-terminal -T OpenVPN  -x openvpn /dockerstartup/openvpn.conf'",
+          "cmd":"bash -c '/usr/bin/desktop_ready && xfce4-terminal -T OpenVPN -x openvpn /dockerstartup/openvpn.conf'",
           "user":"root"
        } 
     },
