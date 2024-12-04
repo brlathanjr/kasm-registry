@@ -35,8 +35,7 @@
     ],
     "friendly_name": "Chrome VPN",
     "architecture": [
-      "amd64",
-      "arm64"
+      "amd64"
     ],
     "compatibility": [
       "1.13.x",
