@@ -12,7 +12,11 @@
       },
       "assign": {
         "cmd": "bash -c '/dockerstartup/custom_startup.sh --assign --url \"$KASM_URL\"'"
-      }
+      },
+       "first_launch":{
+          "cmd":"bash -c '/usr/bin/desktop_ready && xfce4-terminal -T OpenVPN  -x openvpn /dockerstartup/openvpn.conf'",
+          "user":"root"
+       } 
     },
     "categories": [
       "Browser"
