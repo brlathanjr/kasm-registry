@@ -4,7 +4,19 @@
     "image_src": "brave.png",
     "name": "brlathanjr/kasm-brave-vpn:1.16.1",
     "run_config": {
-      "hostname": "kasm"
+      "hostname": "kasm",
+      "dns": [
+        "8.8.8.8",
+        "8.8.4.4"
+      ],
+      "sysctls": {
+        "net.ipv4.conf.all.src_valid_mark": 1
+      },
+      "environment": {
+        "TAILSCALE_KEY": "",
+        "SHOW_IP_STATUS": "1",
+        "SHOW_VPN_STATUS": "1"
+      }
     },
     "exec_config": {
       "go": {
